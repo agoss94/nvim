@@ -4,13 +4,7 @@ return {
   config = function()
     local toggleterm = require 'toggleterm'
     toggleterm.setup {
-      size = function(term)
-        if term.direction == 'horizontal' then
-          return 15
-        elseif term.direction == 'vertical' then
-          return vim.o.columns * 0.4
-        end
-      end,
+      size = 10,
       open_mapping = [[<c-\>]], -- or { [[<c-\>]], [[<c-¥>]] } if you also use a Japanese keyboard.
       hide_numbers = true, -- hide the number column in toggleterm buffers
       shade_filetypes = {},
@@ -39,6 +33,11 @@ return {
       vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
       vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
       vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
+      vim.keymap.set({ 't', 'n' }, '<M-1>', [[<Cmd>ToggleTerm 1<CR>]], opts)
+      vim.keymap.set({ 't', 'n' }, '<M-2>', [[<Cmd>ToggleTerm 2<CR>]], opts)
+      vim.keymap.set({ 't', 'n' }, '<M-3>', [[<Cmd>ToggleTerm 3<CR>]], opts)
+      vim.keymap.set({ 't', 'n' }, '<M-4>', [[<Cmd>ToggleTerm 4<CR>]], opts)
+      vim.keymap.set({ 't', 'n' }, '<M-5>', [[<Cmd>ToggleTerm 5<CR>]], opts)
     end
     -- if you only want these mappings for toggle term use term://*toggleterm#* instead
     vim.cmd 'autocmd! TermOpen term://* lua set_terminal_keymaps()'
