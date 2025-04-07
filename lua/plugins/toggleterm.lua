@@ -4,7 +4,7 @@ return {
   config = function()
     local toggleterm = require 'toggleterm'
     toggleterm.setup {
-      size = 10,
+      size = 15,
       open_mapping = [[<c-\>]], -- or { [[<c-\>]], [[<c-¥>]] } if you also use a Japanese keyboard.
       hide_numbers = true, -- hide the number column in toggleterm buffers
       shade_filetypes = {},
