@@ -30,6 +30,7 @@ require('lazy').setup {
   require 'plugins.lualine',
   require 'plugins.treesitter',
   require 'plugins.telescope',
+  require 'plugins.mason-workaround',
   require 'plugins.lsp',
   require 'plugins.autocompletion',
   require 'plugins.autoformatting',
