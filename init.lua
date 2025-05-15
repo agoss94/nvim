@@ -39,5 +39,5 @@ require('lazy').setup {
   require 'plugins.indent-blankline',
   require 'plugins.toggleterm',
   require 'plugins.misc',
-  require 'plugins.rest',
+  require 'plugins.lilypond-suite',
 }
