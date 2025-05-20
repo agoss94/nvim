@@ -24,6 +24,7 @@ vim.opt.rtp:prepend(lazypath)
 --    :Lazy update
 --
 require('lazy').setup {
+  require 'plugins.debug',
   require 'plugins.neotree',
   require 'plugins.colortheme',
   require 'plugins.bufferline',
