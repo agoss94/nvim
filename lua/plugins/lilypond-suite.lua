@@ -129,7 +129,8 @@ return {
     vim.api.nvim_create_autocmd('FileType', {
       pattern = 'lilypond',
       callback = function()
-        vim.bo.indentexpr = nil
+        vim.bo.indentexpr = ''
+        vim.cmd 'NoMatchParen'
       end,
     })
     nvls.setup(opts)
